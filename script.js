@@ -18,7 +18,7 @@ const phrases = [
 function forgive() {
   document.getElementById("buttons").innerHTML = "";
   document.getElementById("message").innerText =
-    "¡¡YEEEEEI!!, (NO SE TE OLVIDE PAGAR ÑOÑAAA!)";
+    "¡¡YEEEEEI!!, (TÚ MUY BIEN, AQUÍ TE ESPEROOOOO)";
 }
 
 function dontForgive() {
@@ -35,7 +35,7 @@ function dontForgive() {
   } else {
     document.getElementById("buttons").innerHTML = "";
     document.getElementById("message").innerText =
-      "¡Ya clickeaste 30 veces, ya perdóname!";
+      "¡Ya clickeaste 30 veces, ya mejor ven!";
   }
 
   if (clicks < 30) {
