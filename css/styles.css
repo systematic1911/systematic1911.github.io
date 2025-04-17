@@ -1,0 +1,288 @@
+/* ##########################################################*/
+/* EMPIEZA Estilos generales (aplica para todas las pantallas) */
+/* ##########################################################*/
+
+/* body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c0fee8;
+    font-family: Arial, sans-serif;
+} */
+
+/* ##########################################################*/
+/* TERMINA Estilos generales (responsive) */
+/* ##########################################################*/
+
+/* ##########################################################*/
+/* EMPIEZA Estilos index.html */
+/* ##########################################################*/
+.bodyMaquina {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c0fee8;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-maquina {
+    position: relative;
+    max-width: 1080px;
+    width: 100%;
+    margin: 20px;
+}
+
+.imagen-maquina {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones clickeables */
+.circulo-clickeable {
+    position: absolute;
+    width: 38px;  /* Diámetro = 2 * radio (19px) */
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.822);
+    cursor: pointer;
+    transform: translate(-50%, -50%); /* Centrar en coordenadas */
+}
+
+.cuadrado-horizontal-clickeable {
+    position: absolute;
+    width: 220px;  /* Ancho: 658px - 438px = 220px */
+    height: 54px;  /* Alto: 644px - 590px = 54px */
+    border-radius: 8px;  /* Esquinas ligeramente redondeadas */
+    background-color: rgba(255, 0, 0, 0.822);
+    top: 590px;  /* Posición Y inicial */
+    left: 438px; /* Posición X inicial */
+    cursor: pointer;
+}
+
+.cuadrado-vertical-clickeable {
+    position: absolute;
+    width: 220px;  /* Ancho: 658px - 438px = 220px */
+    height: 54px;  /* Alto: 644px - 590px = 54px */
+    border-radius: 8px;  /* Esquinas ligeramente redondeadas */
+    background-color: rgba(255, 0, 0, 0.822);
+    top: 590px;  /* Posición Y inicial */
+    left: 438px; /* Posición X inicial */
+    cursor: pointer;
+}
+
+
+/* Efectos de botones brincantes*/
+.circulo-1 {
+    animation: pulso-circulo 1.5s infinite;
+}
+
+.circulo-2 {
+    animation: pulso-circulo 1.5s infinite;
+}
+
+.circulo-3 {
+    animation: pulso-circulo 1.5s infinite;
+}
+
+.circulo-4 {
+    animation: pulso-circulo 1.5s infinite;
+}
+
+
+.cuadrado-1 {
+    animation: pulso-cuadrado 1.5s infinite;
+}
+
+.cuadrado-2 {
+    animation: pulso-cuadrado 1.5s infinite;
+}
+
+
+/* animaciones */
+@keyframes pulso-circulo {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+@keyframes pulso-cuadrado {
+    0%, 100% { transform: scale(1);}
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.circulo-clickeable:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.cuadrado-horizontal-clickeable:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.cuadrado-vertical-clickeable:hover {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+/* ##########################################################*/
+/* TERMINA Estilos index.html */
+/* ##########################################################*/
+
+
+/* ##########################################################*/
+/* EMPIEZA Estilos aplicableas a las secciones 
+    temperatura.html
+    presion.html
+    pantalla.html
+    bandeja.html
+    metodospago.html
+*/
+/* ##########################################################*/
+.bodyComponente {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #c0fee8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #2d3436;
+}
+
+.div-principal {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 85%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.div-principal::before {
+    content: "⚡";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 100px;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.tituloH1 {
+    color: #00b894;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #636e72;
+    margin-bottom: 40px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.div-contenido-grupo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.div-contenido-individual {
+    background: linear-gradient(135deg, #f5f6fa 0%, #dfe6e9 100%);
+    border-radius: 15px;
+    padding: 25px 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border: 2px solid transparent;
+}
+
+.div-contenido-individual:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 184, 148, 0.2);
+    border-color: #00b894;
+}
+
+.div-icono {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: #00b894;
+    color: white;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.div-nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.div-descripcion {
+    font-size: 0.9rem;
+    color: #636e72;
+}
+
+.div-beta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff7675;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transform: rotate(15deg);
+}
+
+.div-boton-regreso {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.boton-regreso {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00b894;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.boton-regreso:hover {
+    background-color: white;
+    color: #00b894;
+    border-color: #00b894;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+/* ##########################################################*/
+/* TERMINA Estilos aplicableas a las secciones 
+    temperatura.html
+    presion.html
+    pantalla.html
+    bandeja.html
+    metodospago.html
+*/
+/* ##########################################################*/

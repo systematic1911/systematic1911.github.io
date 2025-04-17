@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dí que sí</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <img src="perdon.gif" alt="Perdón" />
-      <h2 id="label1">Ya ven a visitarme ¿va ñoña?</h2>
-      <div id="buttons">
-        <button id="yes" onclick="forgive()">Sí</button>
-        <button id="no" onclick="dontForgive()">No</button>
-      </div>
-      <p id="message"></p>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina Expendedora Interactiva</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bodyMaquina">
+    <div class="contenedor-maquina">
+        <!-- Imagen de la máquina -->
+        <img src="imagen_prueba_principal_1.jpeg" alt="Máquina expendedora" class="imagen-maquina">
+
+        <!-- Botones superpuestos (coordenadas ajustables) -->
+        <!-- <div class="circulo-clickeable circulo-1" style="left: 549px; top: 200px;" data-target="funcion1.html"></div> -->
+        <div class="circulo-clickeable circulo-2" style="left: 386px; top: 346px;" data-target="temperatura.html"></div>
+        <div class="circulo-clickeable circulo-3" style="left: 386px; top: 479px;" data-target="presion.html"></div>
+        <div class="circulo-clickeable circulo-4" style="left: 658px; top: 412px;" data-target="pantalla.html"></div>
+        <div class="cuadrado-horizontal-clickeable cuadrado-1" style="left: 437px; top: 589px;" data-target="bandeja.html"></div>
+        <div class="cuadrado-vertical-clickeable cuadrado-2" style="left: 630px; top: 456px;" data-target="metodospago.html"></div>
+        <!-- <div class="circulo-clickeable spot-3" style="left: 759px; top: 372px;" data-target="funcion3.html"></div> -->
     </div>
-    <script src="script.js"></script>
-  </body>
+  
+    <script src="js/script.js"></script>
+</body>
 </html>
